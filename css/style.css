@@ -526,3 +526,15 @@ text-decoration:underline;
 color:#333;
 }
 
+#slideshow { 
+    margin: 0px auto; 
+    position: relative; 
+    width: 980px; 
+    height: 180px; 
+    padding: 0px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+}

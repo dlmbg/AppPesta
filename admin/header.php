@@ -17,29 +17,36 @@
 		
 		<div class="cleaner_h20"></div>
 		
-		<form method="post" action="banner_post.php" enctype="multipart/form-data">
-		<table cellpadding="3" border="0" style="border-collapse:collapse; width:98%;">
+		<table cellpadding="3" border="1" style="border-collapse:collapse; width:98%;">
 		<tr>
-			<td>Judul</td>
-			<td>:</td>
-			<td><input type="text" name="judul"></td>
-		</tr>
-		<tr>
-			<td>Keterangan</td>
-			<td>:</td>
-			<td><textarea name="keterangan" id="redactor_txt"></textarea></td>
-		</tr>
-		<tr>
+			<td>No.</td>
 			<td>Gambar</td>
-			<td>:</td>
-			<td><input type="file" name="gambar"></td>
+			<td width="100"><div class="index-button"><a href="header_tambah.php">Tambah</a></div></td>
 		</tr>
-		<tr>
-			<td colspan="3"><input type="submit"></td>
-			<input type="hidden" name="jenis" value="tambah">
-		</tr>
+		<?php
+			$kueri = "SELECT * from tbl_header";
+			$STH = $DBH->prepare($kueri);
+			$STH->execute();
+			
+			$total = "";
+			$no = 1;
+			while($data = $STH->fetch())
+			{
+				?>
+					<tr>
+						<td><?php echo $no; ?></td>
+						<td><img src="../header/<?php echo $data['gambar']; ?>" width="80"></td>
+						<td>
+							<div class="index-button"><a href="header_edit.php?id=<?php echo $data['id_header']; ?>">Edit</a></div>
+							<div class="index-button"><a href="header_hapus.php?id=<?php echo $data['id_header']; ?>">Hapus</a></div>
+						</td>
+					</tr>
+				<?php
+				$no++;
+			}
+		?>
 		</table>
-		</form>
+			
 		
 	<div class="cleaner_h10"></div>
 	<div class="cleaner_h5"></div>

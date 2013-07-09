@@ -11,32 +11,27 @@
 	<div class="cleaner_h5"></div>
 		<ul id="crumbs" style="width:99%;">
 			<li><a href="#">Home &raquo;</a></li>
-			<li>Banner</li>
+			<li>Produk</li>
 		</ul>
 		
 		
 		<div class="cleaner_h20"></div>
-		
-		<form method="post" action="banner_post.php" enctype="multipart/form-data">
+		<?php
+			$kueri = "SELECT * from tbl_banner";
+			$STH = $DBH->prepare($kueri);
+			$STH->execute();
+			
+			$data = $STH->fetch();
+		?>
+		<form method="post" action="footer_post.php" enctype="multipart/form-data">
 		<table cellpadding="3" border="0" style="border-collapse:collapse; width:98%;">
-		<tr>
-			<td>Judul</td>
-			<td>:</td>
-			<td><input type="text" name="judul"></td>
-		</tr>
 		<tr>
 			<td>Keterangan</td>
 			<td>:</td>
-			<td><textarea name="keterangan" id="redactor_txt"></textarea></td>
-		</tr>
-		<tr>
-			<td>Gambar</td>
-			<td>:</td>
-			<td><input type="file" name="gambar"></td>
+			<td><textarea name="keterangan" id="redactor_txt"><?php echo $data['keterangan']; ?></textarea></td>
 		</tr>
 		<tr>
 			<td colspan="3"><input type="submit"></td>
-			<input type="hidden" name="jenis" value="tambah">
 		</tr>
 		</table>
 		</form>

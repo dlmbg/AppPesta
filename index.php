@@ -20,7 +20,7 @@
 		
 		<div class="cleaner_h10"></div>
 		
-		<div id="title-news">PRODUK TERBARU - ADONARA BAKTI BANGSA </div>
+		<div id="title-news">PRODUK TERBARU - ULMITA PESTA </div>
 		
 		<?php
 			$kueri = "SELECT * FROM tbl_produk a left join tbl_kategori b on a.id_kategori=b.id_kategori order by id_produk DESC LIMIT 3";

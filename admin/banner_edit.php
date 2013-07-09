@@ -33,7 +33,7 @@
 		<tr>
 			<td>Keterangan</td>
 			<td>:</td>
-			<td><textarea name="keterangan"><?php echo $data['keterangan']; ?></textarea></td>
+			<td><textarea name="keterangan" id="redactor_txt"><?php echo $data['keterangan']; ?></textarea></td>
 		</tr>
 		<tr>
 			<td>Gambar</td>

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Untitled Document</title>
+<title>Ulmita Pesta</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/menu.css" rel="stylesheet" type="text/css" />
 <link href="css/feature-slider.css" rel="stylesheet" type="text/css" />
@@ -20,6 +20,16 @@
 	$(document).ready(function(){
 		$("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
 	});
+	$("#slideshow > div:gt(0)").hide();
+
+	setInterval(function() { 
+	  $('#slideshow > div:first')
+	    .fadeOut(1000)
+	    .next()
+	    .fadeIn(1000)
+	    .end()
+	    .appendTo('#slideshow');
+	},  3000);
 </script> 
 
 <link rel="stylesheet" href="colorbox/colorbox.css" />
@@ -45,7 +55,17 @@
 </div>
 </div><!--akhir other-nav -->
 
-<div class="cleaner_h50"></div>
-<div class="cleaner_h50"></div>
-<div class="cleaner_h50"></div>
-<div class="cleaner_h30"></div>
+<div id="slideshow">
+<?php
+	$kueri = "SELECT * from tbl_header";
+	$STH = $DBH->prepare($kueri);
+	$STH->execute();
+	
+	while($data = $STH->fetch())
+	{
+		?>
+				<div><img src="header/<?php echo $data['gambar']; ?>"></div>
+		<?php
+	}
+?>
+</div>

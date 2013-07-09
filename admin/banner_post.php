@@ -29,5 +29,6 @@ else if($jenis=="edit")
 	    move_uploaded_file($tmp_name, "../banner/".$name."");
 	}
 }
+    echo "asu";
 	echo '<meta http-equiv="refresh" content="0;url=banner.php">';
 ?>

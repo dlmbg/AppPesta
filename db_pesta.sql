@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 29, 2013 at 05:34 PM
--- Server version: 5.1.44
--- PHP Version: 5.3.1
+-- Waktu pembuatan: 09. Juli 2013 jam 18:48
+-- Versi Server: 5.1.44
+-- Versi PHP: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -22,7 +22,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_banner`
+-- Struktur dari tabel `tbl_banner`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_banner` (
@@ -31,20 +31,22 @@ CREATE TABLE IF NOT EXISTS `tbl_banner` (
   `judul` varchar(100) NOT NULL,
   `keterangan` text NOT NULL,
   PRIMARY KEY (`id_banner`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `tbl_banner`
+-- Dumping data untuk tabel `tbl_banner`
 --
 
 INSERT INTO `tbl_banner` (`id_banner`, `gambar`, `judul`, `keterangan`) VALUES
-(1, 'shot_000023.png', 'dsddsdsdsdsd', 'dsds'),
-(2, 'shot_000031.png', 'ewew', 'sxsdsd');
+(3, '5911_3200537190124_355926050_n.jpg', 'Redactor is a javascript program that helps ', 'Redactor is a javascript program that helps you to create word-processed texts on the web. Redactor uses the jQuery library.'),
+(4, '5911_3200537190124_355926050_n.jpg', 'Redactor is a javascript program that helps ', 'Redactor is a javascript program that helps you to create word-processed texts on the web. Redactor uses the jQuery library.'),
+(5, '5911_3200537190124_355926050_n.jpg', 'Redactor is a javascript program that helps ', 'Redactor is a javascript program that helps you to create word-processed texts on the web. Redactor uses the jQuery library.'),
+(6, '5911_3200537190124_355926050_n.jpg', 'Redactor is a javascript program that helps ', 'Redactor is a javascript program that helps you to create word-processed texts on the web. Redactor uses the jQuery library.');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_contact`
+-- Struktur dari tabel `tbl_contact`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_contact` (
@@ -56,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `tbl_contact` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `tbl_contact`
+-- Dumping data untuk tabel `tbl_contact`
 --
 
 INSERT INTO `tbl_contact` (`id_contact`, `nama`, `email`, `pesan`) VALUES
@@ -66,7 +68,46 @@ INSERT INTO `tbl_contact` (`id_contact`, `nama`, `email`, `pesan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_kategori`
+-- Struktur dari tabel `tbl_footer`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_footer` (
+  `id_footer` int(11) NOT NULL AUTO_INCREMENT,
+  `keterangan` text NOT NULL,
+  PRIMARY KEY (`id_footer`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data untuk tabel `tbl_footer`
+--
+
+INSERT INTO `tbl_footer` (`id_footer`, `keterangan`) VALUES
+(1, 'Redactor is a javascript program that helps you to create word-processed texts on the web. Redactor uses the jQuery library.dsds');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_header`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_header` (
+  `id_header` int(11) NOT NULL AUTO_INCREMENT,
+  `gambar` text NOT NULL,
+  PRIMARY KEY (`id_header`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data untuk tabel `tbl_header`
+--
+
+INSERT INTO `tbl_header` (`id_header`, `gambar`) VALUES
+(4, '2.jpg'),
+(3, '1.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_kategori`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_kategori` (
@@ -76,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `tbl_kategori` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
--- Dumping data for table `tbl_kategori`
+-- Dumping data untuk tabel `tbl_kategori`
 --
 
 INSERT INTO `tbl_kategori` (`id_kategori`, `kategori`) VALUES
@@ -87,7 +128,7 @@ INSERT INTO `tbl_kategori` (`id_kategori`, `kategori`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_member`
+-- Struktur dari tabel `tbl_member`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_member` (
@@ -104,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `tbl_member` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
--- Dumping data for table `tbl_member`
+-- Dumping data untuk tabel `tbl_member`
 --
 
 INSERT INTO `tbl_member` (`id_member`, `username`, `password`, `nama`, `jk`, `tgl_lahir`, `email`, `alamat`, `telepon`) VALUES
@@ -113,7 +154,7 @@ INSERT INTO `tbl_member` (`id_member`, `username`, `password`, `nama`, `jk`, `tg
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pemesanan`
+-- Struktur dari tabel `tbl_pemesanan`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_pemesanan` (
@@ -124,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `tbl_pemesanan` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `tbl_pemesanan`
+-- Dumping data untuk tabel `tbl_pemesanan`
 --
 
 INSERT INTO `tbl_pemesanan` (`id_pemesanan`, `id_member`, `tgl_pesan`) VALUES
@@ -135,7 +176,7 @@ INSERT INTO `tbl_pemesanan` (`id_pemesanan`, `id_member`, `tgl_pesan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pemesanan_detail`
+-- Struktur dari tabel `tbl_pemesanan_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_pemesanan_detail` (
@@ -147,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `tbl_pemesanan_detail` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `tbl_pemesanan_detail`
+-- Dumping data untuk tabel `tbl_pemesanan_detail`
 --
 
 INSERT INTO `tbl_pemesanan_detail` (`id_pemesanan_detail`, `id_pemesanan`, `id_produk`, `jumlah`) VALUES
@@ -159,7 +200,7 @@ INSERT INTO `tbl_pemesanan_detail` (`id_pemesanan_detail`, `id_pemesanan`, `id_p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_produk`
+-- Struktur dari tabel `tbl_produk`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_produk` (
@@ -170,21 +211,22 @@ CREATE TABLE IF NOT EXISTS `tbl_produk` (
   `harga` int(20) NOT NULL,
   `keterangan` text NOT NULL,
   PRIMARY KEY (`id_produk`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
--- Dumping data for table `tbl_produk`
+-- Dumping data untuk tabel `tbl_produk`
 --
 
 INSERT INTO `tbl_produk` (`id_produk`, `id_kategori`, `nama`, `gambar`, `harga`, `keterangan`) VALUES
 (1, 3, 'Dekorasi Minimalissss', 'shot_000030.png', 3000000, 'Nangkring di kampus lagi, demi sesuap koneksi inet super duper kenceng untuk update SDK android di laptop kesayangan saya. Setelah sebelumnya saya kelayapan kemana-mana menenangkan pikiran yang mumet gak karuan gara-gara faktor X'),
 (2, 1, 'Dekorasi Pengantin', '', 4000000, 'Nangkring di kampus lagi, demi sesuap koneksi inet super duper kenceng untuk update SDK android di laptop kesayangan saya. Setelah sebelumnya saya kelayapan kemana-mana menenangkan pikiran yang mumet gak karuan gara-gara faktor X'),
-(3, 1, 'dsdsd', '5911_3200537190124_355926050_n.jpg', 45555, 'sdsd');
+(3, 1, 'dsdsd', '5911_3200537190124_355926050_n.jpg', 45555, 'sdsd'),
+(5, 3, 'dsdsd', '', 33434, '<p>dsdsdsrrrrre csdsd</p>\r\n');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user`
+-- Struktur dari tabel `tbl_user`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_user` (
@@ -196,7 +238,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `tbl_user`
+-- Dumping data untuk tabel `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`id_user`, `username`, `password`, `nama`) VALUES

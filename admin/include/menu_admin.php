@@ -3,7 +3,6 @@
 		<div id="MainMenu"><div id="Menu">
 		  <div class="suckertreemenu">
 			<ul id="treemenu1">
-				<li><a href="dashboard.php">Dashboard &raquo;</a></li>
 				<li><a href="kategori.php">Kategori &raquo;</a></li>
 				<li><a href="produk.php">Produk &raquo;</a></li>
 				<li><a href="member.php">Member &raquo;</a></li>
@@ -11,6 +10,8 @@
 				<li><a href="contact.php">Contact &raquo;</a></li>
 				<li><a href="pesanan.php">Pesanan &raquo;</a></li>
 				<li><a href="user.php">User &raquo;</a></li>
+				<li><a href="header.php">Header &raquo;</a></li>
+				<li><a href="footer.php">Footer &raquo;</a></li>
 				<li><a href="../logout.php">Log Out &raquo;</a></li>
 			</ul>
 			</div>

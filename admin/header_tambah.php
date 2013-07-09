@@ -17,18 +17,8 @@
 		
 		<div class="cleaner_h20"></div>
 		
-		<form method="post" action="banner_post.php" enctype="multipart/form-data">
+		<form method="post" action="header_post.php" enctype="multipart/form-data">
 		<table cellpadding="3" border="0" style="border-collapse:collapse; width:98%;">
-		<tr>
-			<td>Judul</td>
-			<td>:</td>
-			<td><input type="text" name="judul"></td>
-		</tr>
-		<tr>
-			<td>Keterangan</td>
-			<td>:</td>
-			<td><textarea name="keterangan" id="redactor_txt"></textarea></td>
-		</tr>
 		<tr>
 			<td>Gambar</td>
 			<td>:</td>
